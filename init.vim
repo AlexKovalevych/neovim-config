@@ -19,7 +19,8 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeToggle' }
 Plug 'elixir-lang/vim-elixir'
 Plug 'awetzel/nvim-rplugin'
 Plug 'thinca/vim-ref'
-Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
+" Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
+Plug 'slashmili/alchemist.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
@@ -40,6 +41,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'elmcast/elm-vim'
 
 " Add plugins to &runtimepath
 call plug#end()
