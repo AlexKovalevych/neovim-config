@@ -42,6 +42,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'elmcast/elm-vim'
+Plug 'troydm/zoomwintab.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
