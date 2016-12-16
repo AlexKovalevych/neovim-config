@@ -189,12 +189,9 @@ nnoremap <F8> :NERDTreeToggle<CR>
 
 " CtrlP
 let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/_build/*,*.so,*.swp,*.zip,*.o,*.a,*_test,*.prefs,.project,.cproject
-let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-            \ 'file': '\v\.(exe|so|dll|o|.DS_Store)$',
-            \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-            \ }
+set wildignore+=*/_build/*,*/node_modules/*.so,*.swp,*.zip,*.o,*.a,*_test,*.prefs,.project,.cproject
+
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|DS_Store))$'
 "let g:ctrlp_user_command = 'ag --ignore={build,.git,.project,*.o,*.d} %s -l --hidden -g ""'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_switch_buffer=0
@@ -203,3 +200,5 @@ set clipboard+=unnamedplus
 
 " clear trailing spaces on save
 autocmd BufWritePre * StripWhitespace
+
+let g:elm_format_autosave = 1
