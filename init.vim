@@ -43,6 +43,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'elmcast/elm-vim'
 Plug 'troydm/zoomwintab.vim'
+Plug 'moll/vim-bbye'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -120,7 +121,8 @@ nmap <Leader>s :%s//g<Left><Left><Paste>
 " nnoremap Q @q   " Use Q to execute default register.
 
 " Fuzzy search
-nnoremap <C-p> :call fzf#run({'sink': 'tabedit'})<CR>
+" nnoremap <C-p> :call fzf#run({'sink': 'tabedit'})<CR>
+nnoremap <Leader>q :Bdelete<CR>
 
 " Airline {
   let g:airline#extensions#tabline#enabled = 1
