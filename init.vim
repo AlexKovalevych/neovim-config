@@ -185,6 +185,7 @@ let g:indentLine_faster = 1
 let g:indentLine_concealcursor = 0
 let g:indentLine_color_gui = '#444444'
 
+set tabstop=2 shiftwidth=2 expandtab
 
 " NERDTree
 let g:NERDTreeWinSize=26
