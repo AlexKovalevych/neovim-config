@@ -44,6 +44,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'elmcast/elm-vim'
 Plug 'troydm/zoomwintab.vim'
 Plug 'moll/vim-bbye'
+Plug 'kassio/neoterm'
 
 " Add plugins to &runtimepath
 call plug#end()
