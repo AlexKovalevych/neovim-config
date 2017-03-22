@@ -23,11 +23,13 @@ Plug 'thinca/vim-ref'
 Plug 'slashmili/alchemist.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'vim-airline/vim-airline'
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 " Plug 'ryanoasis/vim-devicons'
 Plug 'mhartington/oceanic-next'
+Plug 'freeo/vim-kalisi'
+Plug 'chriskempson/base16-vim'
 Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'neomake/neomake'
 
@@ -45,6 +47,8 @@ Plug 'elmcast/elm-vim'
 Plug 'troydm/zoomwintab.vim'
 Plug 'moll/vim-bbye'
 Plug 'kassio/neoterm'
+"Plug 'docteurklein/neovim-php'
+"Plug 'php-vim/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -138,6 +142,7 @@ nnoremap <Leader>q :Bdelete<CR>
   let g:airline_right_sep = ''
   let g:airline_right_alt_sep = ''
   let g:airline_theme= 'oceanicnext'
+"  let g:airline_theme='kalisi'
   let g:airline#extensions#branch#enabled = 1
 " }
 
@@ -160,7 +165,7 @@ nmap <Leader>h :bprevious<CR>
 
 " Colorscheme options.
 " For Neovim 0.1.3 and 0.1.4
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Or if you have Neovim >= 0.1.5
 if (has("termguicolors"))
@@ -169,7 +174,9 @@ endif
 
 " Theme
 syntax enable
-colorscheme OceanicNext
+"colorscheme OceanicNext
+"colorscheme kalisi
+colorscheme base16-default-dark
 
 nnoremap gb :ls<CR>:b<Space>
 
@@ -193,9 +200,9 @@ nnoremap <F8> :NERDTreeToggle<CR>
 
 " CtrlP
 let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/_build/*,*/node_modules/*.so,*.swp,*.zip,*.o,*.a,*_test,*.prefs,.project,.cproject
+set wildignore+=*/_build/*,*/bower_components/*,*/node_modules/*.so,*.swp,*.zip,*.o,*.a,*_test,*.prefs,.project,.cproject
 
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|DS_Store))$'
+let g:ctrlp_custom_ignore = '\v[\/](cache|node_modules|vendor|bower_components|target|dist)|(\.(swp|ico|git|svn|DS_Store))$'
 "let g:ctrlp_user_command = 'ag --ignore={build,.git,.project,*.o,*.d} %s -l --hidden -g ""'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_switch_buffer=0
@@ -206,3 +213,7 @@ set clipboard+=unnamedplus
 autocmd BufWritePre * StripWhitespace
 
 let g:elm_format_autosave = 1
+
+" PHP
+let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+let g:deoplete#ignore_sources.php = ['omni']
