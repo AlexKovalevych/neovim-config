@@ -47,6 +47,8 @@ Plug 'elmcast/elm-vim'
 Plug 'troydm/zoomwintab.vim'
 Plug 'moll/vim-bbye'
 Plug 'kassio/neoterm'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 "Plug 'docteurklein/neovim-php'
 "Plug 'php-vim/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 
@@ -202,7 +204,7 @@ nnoremap <F8> :NERDTreeToggle<CR>
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/_build/*,*/bower_components/*,*/node_modules/*.so,*.swp,*.zip,*.o,*.a,*_test,*.prefs,.project,.cproject
 
-let g:ctrlp_custom_ignore = '\v[\/](cache|node_modules|vendor|bower_components|target|dist|_build|deps|priv/static)|(\.(swp|ico|git|svn|DS_Store))$'
+let g:ctrlp_custom_ignore = '\v[\/](app/cache|node_modules|vendor|bower_components|target|dist|_build|deps|priv/static)|(\.(swp|ico|git|svn|DS_Store))$'
 "let g:ctrlp_user_command = 'ag --ignore={build,.git,.project,*.o,*.d} %s -l --hidden -g ""'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_switch_buffer= 'e'
