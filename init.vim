@@ -202,7 +202,7 @@ nnoremap <F8> :NERDTreeToggle<CR>
 
 " CtrlP
 let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/_build/*,*/bower_components/*,*/node_modules/*.so,*.swp,*.zip,*.o,*.a,*_test,*.prefs,.project,.cproject
+set wildignore+=*/_build/*,*/bower_components/*,*/elm-stuff/*,*/node_modules/*.so,*.swp,*.zip,*.o,*.a,*_test,*.prefs,.project,.cproject
 
 let g:ctrlp_custom_ignore = '\v[\/](app/cache|node_modules|vendor|bower_components|target|dist|_build|deps|priv/static)|(\.(swp|ico|git|svn|DS_Store))$'
 "let g:ctrlp_user_command = 'ag --ignore={build,.git,.project,*.o,*.d} %s -l --hidden -g ""'
