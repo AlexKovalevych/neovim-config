@@ -17,7 +17,7 @@ tmux send-keys -t ehealth:otp_verification 'cd ~/Sites/otp_verification.api' C-m
 tmux send-keys -t ehealth:mithril 'cd ~/Sites/mithril.api' C-m
 tmux send-keys -t ehealth:man 'cd ~/Sites/man.api' C-m
 
-tmux new-session -s medical_events
+tmux new-session -s medical_events -d
 tmux new-window -n medical_events -d
 tmux new-window -n mongo -d
 
